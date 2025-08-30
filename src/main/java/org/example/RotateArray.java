@@ -14,18 +14,19 @@ public class RotateArray {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int arrLength = in.nextInt();
+        int rotateCount = in.nextInt();
+        int effectiveRotateCount = rotateCount % arrLength;
         int[] arr = new int[arrLength];
         for (int i = 0; i <= arrLength - 1; i++) {
             arr[i] = in.nextInt();
         }
-        System.out.println(Arrays.toString(arr));
-        int rotateCount = in.nextInt();
-        int effectiveRotateCount = rotateCount % arrLength;
-        System.out.println("effectiveRotateCount: " + effectiveRotateCount);
-        reverse(arr, 0, effectiveRotateCount);
+        //System.out.println(Arrays.toString(arr));
+
+        //System.out.println("effectiveRotateCount: " + effectiveRotateCount);
+        reverse(arr, 0, arrLength-effectiveRotateCount-1);
         reverse(arr, effectiveRotateCount+1, arrLength-1);
         reverse(arr, 0, arrLength-1);
-        System.out.println(Arrays.toString(arr));
+        //System.out.println(Arrays.toString(arr));
     }
 
     private static void reverse(int[] arr, int start, int end){

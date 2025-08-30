@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class NSumRecursion {
 
     // in java, we don't get tail call optimization, so stack size will always be O(n)
+    //always run for boundary condition
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int num = in.nextInt();
