@@ -17,12 +17,14 @@ public class RearrangeArray {
 
         System.out.println(Arrays.toString(elements));
 
-        for(int i=0; i<=arrLength-1; i++){
+        for (int i = 0; i <= arrLength - 1; i++) {
             int temp = elements[i];
-            while(temp > 0){
-                elements[temp] = -i;
-                temp = elements[temp];
+            while (temp >= 0) {
+                int nextIndex = elements[temp];
+                elements[temp] = (-i - 1);
+                temp = elements[nextIndex];
             }
+            elements[temp] = (-i - 1);
         }
 
         System.out.println(Arrays.toString(elements));
