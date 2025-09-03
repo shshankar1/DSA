@@ -20,7 +20,7 @@ public class RearrangeArray {
         for(int i=0; i<=arrLength-1; i++){
             int temp = elements[i];
             while(temp > 0){
-                elements[temp] = i*-1;
+                elements[temp] = -i;
                 temp = elements[temp];
             }
         }
