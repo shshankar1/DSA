@@ -11,7 +11,7 @@ import java.util.Scanner;
 //  1. i/p: [36, 60, 48], o/p: 12
 //  2. i/p: [17, 34, 51, 85], o/p: 17
 //  3. i/p: [45, 60, 75, 90, 105], o/p: 15
-//  4. i/p: [0, 0, 0, 14, 21], o/p: 7x
+//  4. i/p: [0, 0, 0, 14, 21], o/p: 7
 public class GcdProblem {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -21,9 +21,8 @@ public class GcdProblem {
             arr[i] = in.nextInt();
         }
         System.out.println(Arrays.toString(arr));
-
-        int result = findGcd(arr[0], arr[1]);
-        int i = 2;
+        int result = 0;
+        int i = 0;
         while (i <= arrLength - 1) {
             result = findGcd(result, arr[i]);
             i += 1;
