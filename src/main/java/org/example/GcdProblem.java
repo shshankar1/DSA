@@ -3,7 +3,6 @@ package org.example;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// input: , output:
 // time complexity: O(log2min(a,b))
 // questions to ask, can elements be zero in input
 // gcd of 2 elements having one element zero will be nonzero element
